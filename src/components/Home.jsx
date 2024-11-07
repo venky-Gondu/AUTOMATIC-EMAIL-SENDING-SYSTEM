@@ -9,6 +9,7 @@ import {
   TableCell,
 } from "@nextui-org/react";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const sampleData = [
@@ -157,7 +158,7 @@ export default function Home() {
         Name,’ ‘Location,’ ‘Email Address,’ etc., for effective email
         personalization.
       </p>
-      <Button className="h-40" color="primary">
+      <Button className="h-40" color="primary" href="/templates" as={Link}>
         Upload CSV File
       </Button>
       <p>Accepted file types: .csv</p>
