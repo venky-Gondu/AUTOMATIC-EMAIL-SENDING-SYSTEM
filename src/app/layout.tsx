@@ -3,6 +3,7 @@ import clsx from "clsx";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
+import SideBar from "@/components/SideBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,7 +43,12 @@ export default function RootLayout({
       <body
         className={`min-h-screen bg-background font-montserrat antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="flex">
+            <SideBar />
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );
